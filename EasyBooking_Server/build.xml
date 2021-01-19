@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="run" name="EasyBooking_Server">
+    <!-- project directories -->
+    <property name="src.dir" location="src"/>
+    <property name="bin.dir" location="bin"/>
+	<property name="lib.dir" location="lib"/>
+	<property name="resources.dir" location="resources"/>
+	
+	<property name="dist.dir" location="dist"/>
+	<property name="server.port" value="1099"/> 
+	<property name="server.IP" value="127.0.0.1"/>
+	<property name="server.Name" value="EasyBooking"/>
+	<property name="export.file" value="EasyBooking.jar"/>
+	<property name="policy.file" location="security/java.policy"/>	
+	
+    <!-- Classpath -->
+    <path id="full.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <pathelement location="${bin.dir}"/>
+        <pathelement location="${resources.dir}"/>
+    </path>
+	
+	<target name="help">
+			<echo>Usage: ant [run | runserver]</echo>
+	</target>
+
+    <!-- TARGET : clean -->
+    <target name="clean">
+        <delete includeEmptyDirs="true" quiet="true">
+            <fileset dir="${bin.dir}" includes="**/*.*"/>
+        </delete>
+		<delete dir="${bin.dir}"/>
+    </target>
+
+    <!-- TARGET : prepare -->
+    <target name="prepare">
+        <mkdir dir="${bin.dir}"/>
+    </target>
+
+    <!-- TARGET : compile -->
+    <target name="compile" depends="clean, prepare">
+        <javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="full.classpath" includeantruntime="no">
+            <include name="**/*.java"/>
+         </javac>
+    </target>
+	
+    <!-- TARGET : enhance -->
+    <target name="enhance" depends="compile">
+    	<taskdef name="enhancer" classpathref="full.classpath" classname="org.datanucleus.enhancer.EnhancerTask" />
+    	
+   		<enhancer classpathref="full.classpath" failonerror="true">
+            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+            <fileset dir="${bin.dir}">
+                <include name="**/*.class"/>
+            </fileset>
+   		</enhancer>
+    </target>
+
+    <!-- TARGET : SchemaTool "create" -->
+    <target name="createschema" depends="enhance">
+        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+    	<schematool mode="create" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
+            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+            <fileset dir="${bin.dir}">
+                <include name="**/*.class"/>
+            </fileset>
+        </schematool>
+    </target>
+
+    <!-- TARGET : SchemaTool "delete" -->
+    <target name="deleteschema">
+        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+    	 	<schematool mode="delete" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">            
+    	      <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+    	 		<fileset dir="${bin.dir}">
+                <include name="**/*.class"/>
+            </fileset>
+        </schematool>
+    </target>
+	
+	 <!-- SchemaTool "dbinfo" -->
+	    <target name="schemainfo">
+	    	<taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+	    	
+	        <schematool mode="dbinfo" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
+	        	 <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+	        	<fileset dir="${bin.dir}">
+	                <include name="**/*.class"/>
+	            </fileset>
+       
+	        </schematool>
+	    </target>
+    <!-- TARGET : Run -->	
+	<target name="run" depends="createschema">
+        <java classname="es.deusto.ingenieria.sd.datanucleus.jdo.DAOTest_Copies" classpathref="full.classpath" fork="true">
+        	<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
+		</java>
+    </target>
+	 
+	<!-- TARGET : RMI Service Section - export and runServer -->	
+	
+	<target name="export" depends="compile" description="Export the project into a .jar file">
+			<jar destfile="${dist.dir}/${export.file}" basedir="${bin.dir}" includes="**/IEasyBookingManager.class"/>
+    </target>	
+	
+	<!-- TARGET : Running the Server -->	
+	
+	<target name="runserver" depends="createschema" description="Runs the Server">
+			<java classname="server.EasyBookingManagerServer" classpathref="full.classpath" fork="true">
+				<jvmarg value="-Djava.rmi.server.codebase=file:${bin.dir}/"/>
+				<jvmarg value="-Djava.security.policy=${policy.file}"/>		
+				<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
+	        	<arg value="${server.IP}"/> 
+		 		<arg value="${server.port}"/> 
+				<arg value="${server.Name}"/> 
+	        </java>
+	 </target>
+</project>
