@@ -9,9 +9,7 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-import es.deusto.ingenieria.sd.datanucleus.jdo.data.Book;
-import es.deusto.ingenieria.sd.datanucleus.jdo.data.Product;
-import es.deusto.ingenieria.sd.datanucleus.jdo.data.Shelf;
+//imports datanucleus
 
 public class FlightDAO implements IFlightDAO {
 
