@@ -1,0 +1,1373 @@
+19-01-21_19:26:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+19-01-21_19:26:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 0 clases.
+19-01-21_19:26:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado sin enhance ninguna clase. Compruebe el LOG para los detalles.
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+19-01-21_19:26:22 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+19-01-21_19:26:27 (main) ERROR [DataNucleus.Datastore.Schema] - La inicialización del base de datos ha fallado.
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+org.datanucleus.exceptions.NucleusDataStoreException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl.getConnection(ConnectionFactoryImpl.java:518)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.<init>(RDBMSStoreManager.java:288)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.datanucleus.plugin.NonManagedPluginRegistry.createExecutableExtension(NonManagedPluginRegistry.java:651)
+	at org.datanucleus.plugin.PluginManager.createExecutableExtension(PluginManager.java:295)
+	at org.datanucleus.NucleusContextHelper.createStoreManagerForProperties(NucleusContextHelper.java:140)
+	at org.datanucleus.PersistenceNucleusContextImpl.initialise(PersistenceNucleusContextImpl.java:445)
+	at org.datanucleus.store.schema.SchemaTool.getNucleusContextForMode(SchemaTool.java:728)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:299)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:79)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:254)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:864)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:434)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:362)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:132)
+	at org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl.getConnection(ConnectionFactoryImpl.java:501)
+	... 12 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:574)
+	at java.base/sun.nio.ch.Net.connect(Net.java:563)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 27 more
+Nested Throwables StackTrace:
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:79)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:254)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:864)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:434)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:362)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:132)
+	at org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl.getConnection(ConnectionFactoryImpl.java:501)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.<init>(RDBMSStoreManager.java:288)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.datanucleus.plugin.NonManagedPluginRegistry.createExecutableExtension(NonManagedPluginRegistry.java:651)
+	at org.datanucleus.plugin.PluginManager.createExecutableExtension(PluginManager.java:295)
+	at org.datanucleus.NucleusContextHelper.createStoreManagerForProperties(NucleusContextHelper.java:140)
+	at org.datanucleus.PersistenceNucleusContextImpl.initialise(PersistenceNucleusContextImpl.java:445)
+	at org.datanucleus.store.schema.SchemaTool.getNucleusContextForMode(SchemaTool.java:728)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:299)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:574)
+	at java.base/sun.nio.ch.Net.connect(Net.java:563)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 27 more
+19-01-21_19:26:27 (main) ERROR [DataNucleus.Datastore] - Exception thrown creating StoreManager : Connection refused: connect
+19-01-21_19:26:27 (main) ERROR [DataNucleus.SchemaTool] - Error creating NucleusContext
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+org.datanucleus.exceptions.NucleusDataStoreException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl.getConnection(ConnectionFactoryImpl.java:518)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.<init>(RDBMSStoreManager.java:288)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.datanucleus.plugin.NonManagedPluginRegistry.createExecutableExtension(NonManagedPluginRegistry.java:651)
+	at org.datanucleus.plugin.PluginManager.createExecutableExtension(PluginManager.java:295)
+	at org.datanucleus.NucleusContextHelper.createStoreManagerForProperties(NucleusContextHelper.java:140)
+	at org.datanucleus.PersistenceNucleusContextImpl.initialise(PersistenceNucleusContextImpl.java:445)
+	at org.datanucleus.store.schema.SchemaTool.getNucleusContextForMode(SchemaTool.java:728)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:299)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:79)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:254)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:864)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:434)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:362)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:132)
+	at org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl.getConnection(ConnectionFactoryImpl.java:501)
+	... 12 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:574)
+	at java.base/sun.nio.ch.Net.connect(Net.java:563)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 27 more
+Nested Throwables StackTrace:
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:79)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:254)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:864)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:434)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:362)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:132)
+	at org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl.getConnection(ConnectionFactoryImpl.java:501)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.<init>(RDBMSStoreManager.java:288)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.datanucleus.plugin.NonManagedPluginRegistry.createExecutableExtension(NonManagedPluginRegistry.java:651)
+	at org.datanucleus.plugin.PluginManager.createExecutableExtension(PluginManager.java:295)
+	at org.datanucleus.NucleusContextHelper.createStoreManagerForProperties(NucleusContextHelper.java:140)
+	at org.datanucleus.PersistenceNucleusContextImpl.initialise(PersistenceNucleusContextImpl.java:445)
+	at org.datanucleus.store.schema.SchemaTool.getNucleusContextForMode(SchemaTool.java:728)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:299)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:574)
+	at java.base/sun.nio.ch.Net.connect(Net.java:563)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 27 more
+22-01-21_19:02:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+22-01-21_19:02:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 0 clases.
+22-01-21_19:02:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado sin enhance ninguna clase. Compruebe el LOG para los detalles.
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+22-01-21_19:02:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+22-01-21_19:02:07 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+22-01-21_19:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+22-01-21_19:02:07 (main) ERROR [DataNucleus.Datastore.Schema] - No hay clases !
+22-01-21_19:02:07 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: No hay clases !
+No hay clases !
+org.datanucleus.exceptions.NucleusException: No hay clases !
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3983)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+22-01-21_19:03:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+22-01-21_19:03:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 0 clases.
+22-01-21_19:03:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado sin enhance ninguna clase. Compruebe el LOG para los detalles.
+22-01-21_19:03:14 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+22-01-21_19:03:15 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 0 clases.
+22-01-21_19:03:15 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado sin enhance ninguna clase. Compruebe el LOG para los detalles.
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+22-01-21_19:03:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+22-01-21_19:03:16 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+22-01-21_19:03:16 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+22-01-21_19:03:16 (main) ERROR [DataNucleus.Datastore.Schema] - No hay clases !
+22-01-21_19:03:16 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: No hay clases !
+No hay clases !
+org.datanucleus.exceptions.NucleusException: No hay clases !
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3983)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:509)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:425)
+22-01-21_19:21:30 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+22-01-21_19:21:30 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+22-01-21_19:21:30 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+22-01-21_19:21:38 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+22-01-21_19:21:39 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+22-01-21_19:21:39 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+22-01-21_19:21:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+22-01-21_19:21:40 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+22-01-21_19:21:41 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+22-01-21_19:21:41 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+22-01-21_19:21:41 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+22-01-21_19:23:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+22-01-21_19:23:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+22-01-21_19:23:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+22-01-21_19:23:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+22-01-21_19:23:43 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+22-01-21_19:23:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_10:18:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:18:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:18:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_10:18:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_10:18:08 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_10:18:09 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_10:30:10 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:30:10 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:30:10 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_10:30:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_10:30:11 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_10:30:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_10:30:12 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_10:31:23 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:31:24 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:31:24 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_10:31:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_10:31:25 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_10:31:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_10:32:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:32:01 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:32:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_10:32:01 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_10:32:02 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_10:32:03 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_10:33:09 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:33:10 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:33:10 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_10:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_10:33:11 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_10:33:11 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_10:33:12 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_10:33:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:33:36 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:33:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:33:45 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:33:45 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:33:45 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_10:33:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_10:33:46 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_10:33:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_10:33:47 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_10:34:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_10:34:36 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_10:34:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_10:34:36 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_10:34:37 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_10:34:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_11:51:27 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_11:51:28 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_11:51:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_11:51:28 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_11:51:29 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_11:51:29 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23-01-21_11:51:29 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23-01-21_11:51:29 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_11:59:50 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_11:59:50 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_11:59:50 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_11:59:51 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_11:59:52 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_11:59:52 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23-01-21_11:59:52 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23-01-21_11:59:52 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_12:08:41 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_12:08:41 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_12:08:41 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_12:08:41 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_12:08:42 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_12:08:42 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23-01-21_12:13:17 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+23-01-21_12:13:17 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+23-01-21_12:13:17 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+23-01-21_12:13:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+23-01-21_12:13:18 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+23-01-21_12:13:19 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:01:56 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:01:56 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:01:56 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:01:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:01:58 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:01:58 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:14:29 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:14:29 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:14:29 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:14:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:14:36 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:14:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:14:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:14:38 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:14:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:15:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:15:33 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:15:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:15:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:15:35 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:15:35 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:20:20 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:20:21 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:20:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:20:29 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:20:29 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:20:29 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:20:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:20:31 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:20:31 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:46:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:46:36 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:46:36 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:46:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:46:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:46:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:46:43 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:46:44 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:46:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:47:23 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:47:23 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:47:23 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:47:24 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:47:25 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:47:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:52:32 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:52:32 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:52:32 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:52:37 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:52:38 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:52:38 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:52:38 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:52:39 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:52:39 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_12:53:15 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_12:53:15 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_12:53:15 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_12:53:15 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_12:53:16 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_12:53:17 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_14:15:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_14:15:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_14:15:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_14:15:11 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_14:15:11 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_14:15:11 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_14:15:12 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_14:15:13 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_14:15:13 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+24-01-21_14:15:13 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+24-01-21_14:15:13 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_14:16:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_14:16:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_14:16:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_14:16:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_14:16:05 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_14:16:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_14:17:53 (RMI TCP Connection(5)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_15:59:25 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_15:59:25 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_15:59:25 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_15:59:32 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_15:59:33 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_15:59:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_15:59:33 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_15:59:34 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_15:59:34 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_15:59:35 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+24-01-21_15:59:35 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+24-01-21_15:59:35 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_16:01:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_16:01:28 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_16:01:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_16:01:29 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_16:01:30 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_16:01:30 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_16:20:50 (RMI TCP Connection(8)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_16:54:32 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_16:54:33 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_16:54:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_16:54:53 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_16:54:54 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_16:54:54 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\payPal.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_16:54:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_16:54:56 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayPaypal.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayPayment.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_16:54:56 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+24-01-21_16:54:56 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+24-01-21_16:54:56 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_16:55:35 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_16:55:35 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_16:55:35 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\payPal.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_16:55:35 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_16:55:37 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayPaypal.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayPayment.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_16:55:37 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_17:02:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_17:02:58 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_17:02:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_17:03:06 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_17:03:06 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_17:03:06 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\payPal.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_17:03:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_17:03:08 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayPaypal.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayPayment.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_17:03:08 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_17:03:44 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_17:03:44 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_17:03:44 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\payPal.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_17:03:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_17:03:47 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayPaypal.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayPayment.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_17:03:47 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_17:05:13 (RMI TCP Connection(3)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_17:22:56 (RMI TCP Connection(11)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_17:29:35 (RMI TCP Connection(20)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_17:31:59 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_17:31:59 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_17:31:59 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_17:32:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_17:32:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_17:32:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\payPal.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_17:32:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_17:32:09 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayPaypal.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayPayment.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_17:32:09 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_17:32:43 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.2.3) para el API "JDO" utilisando el JRE "{2}"
+24-01-21_17:32:43 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class" con definicion enhanced
+24-01-21_17:32:43 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 1 clases.
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-api-jdo-5.2.4.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-core-5.2.3.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\datanucleus-rdbms-5.2.3.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\google.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\javax.jdo-3.2.0-m13.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\log4j-1.2.14.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\mysql-connector-java-8.0.20.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\payPal.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\lib\vueling.jar
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin
+24-01-21_17:32:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\resources
+24-01-21_17:32:45 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\IReservationDAO.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dao\ReservationDAO.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\data\Reservation.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightAssembler.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\dto\EBFlightDTO.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAirline2.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayAuthentication.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\GatewayPaypal.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAirline.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayAuthentication.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\gateway\IGatewayPayment.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\EasyBookingManager.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\remote\IEasyBookingManager.class
+24-01-21_17:32:45 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\workspace\EasyBooking_Server\bin\server\EasyBookingManagerServer.class
+24-01-21_17:32:46 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+24-01-21_17:33:39 (RMI TCP Connection(2)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+25-01-21_11:20:48 (RMI TCP Connection(212)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+25-01-21_11:43:58 (RMI TCP Connection(227)-192.168.94.1) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
